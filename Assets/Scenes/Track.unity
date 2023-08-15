@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 108562549}
   - component: {fileID: 108562550}
+  - component: {fileID: 108562551}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -148,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108562548}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.916, z: 0}
   m_LocalScale: {x: 0.385095, y: 0.385095, z: 0.77019}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -207,6 +208,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &108562551
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108562548}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.71, y: 1.31}
+    newSize: {x: 0.71, y: 1.31}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.295, y: 0.655}
+      - {x: -0.265, y: 0.655}
+      - {x: -0.355, y: 0.615}
+      - {x: -0.355, y: -0.615}
+      - {x: -0.285, y: -0.655}
+      - {x: 0.275, y: -0.655}
+      - {x: 0.33499998, y: -0.615}
+      - {x: 0.355, y: -0.585}
+      - {x: 0.355, y: 0.565}
 --- !u!1 &146985904
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +280,7 @@ Transform:
   m_GameObject: {fileID: 146985904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 567732486}
@@ -1188,7 +1223,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.3223515
+  orthographic size: 5.2719555
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1212,7 +1247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970005026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.32, y: -0.33, z: -10}
+  m_LocalPosition: {x: -10.88, y: -0.68, z: -10}
   m_LocalScale: {x: 0.77019, y: 0.77019, z: 0.77019}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1338,5 +1373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32dcba804ee7d204f86f8bfe35815283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accelerationFactor: 3
-  turnFactor: 3.5
+  accelerationFactor: 2
+  turnFactor: 4
+  driftFactor: 0.85
+  maxSpeed: 8
